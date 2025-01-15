@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="button" onclick="Color(this)" style="color: black;">색깔 바꾸기 버튼</button>
+    <script>
+        const colors = ['red', 'blue', 'green', 'black'];
+
+        function Color(button) {
+            let currentColor = colors.indexOf(button.style.color);
+            button.style.color = colors[(currentColor + 1) % colors.length] || colors[0];
+        }
+    </script>
+</body>
+</html>
